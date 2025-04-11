@@ -1,0 +1,665 @@
+/* General Header Styles */
+/* Header styles */
+header {
+  background: linear-gradient(
+    90deg,
+    #007bff,
+    #00c6ff
+  ); /* Electric blue gradient */
+  color: #fff; /* White text for contrast */
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header nav h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Navigation links for larger screens */
+.nav-links {
+  display: flex; /* Display links horizontally */
+  justify-content: flex-end; /* Align links to the right */
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #fff; /* White text for navigation links */
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Hover effect for horizontal navigation links */
+.nav-links li a:hover {
+  color: #fff; /* Keep text color white */
+  background-color: #007bff; /* Add electric blue background */
+  padding: 0.3rem 0.5rem; /* Add padding for better appearance */
+  border-radius: 5px; /* Add rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none; /* Hidden by default */
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff; /* White color for visibility */
+}
+
+/* Navigation menu for smaller screens */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -100%; /* Hidden by default */
+  width: 60%; /* Max width of 60% */
+  height: 100%;
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 2rem 1rem;
+  transition: left 0.3s ease; /* Smooth slide-in effect */
+  z-index: 1000;
+}
+
+.nav-menu.active {
+  left: 0; /* Slide in when active */
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-menu ul li {
+  margin-bottom: 1rem;
+}
+
+.nav-menu ul li a {
+  color: #000; /* Black text for visibility */
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Hover effect for vertical menu links */
+.nav-menu ul li a:hover {
+  color: #fff; /* Change text color to white */
+  background-color: #007bff; /* Add electric blue background */
+  padding: 0.3rem 0.5rem; /* Add padding for better appearance */
+  border-radius: 5px; /* Add rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.close-menu {
+  font-size: 1.8rem;
+  color: #000; /* Black text for visibility */
+  cursor: pointer;
+  margin-bottom: 2rem;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide navigation links on smaller screens */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon on smaller screens */
+  }
+}
+/* For larger screens (min-width: 769px) */
+@media (min-width: 769px) {
+  .nav-menu {
+    display: none; /* Hide the vertical menu on larger screens */
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger icon on larger screens */
+  }
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.hero p {
+  background: rgba(128, 128, 128, 0.611);
+  border-radius: 1rem;
+}
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #03b2f8; /* Soft blue color for the header text */
+}
+
+.hero-content p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  background-color: #ff6b00;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background-color: #e65a00;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Light background color */
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5em;
+  color: #002b5b; /* Dark blue color */
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2em;
+  color: #333; /* Dark gray text */
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Programs and Services Section */
+.programs {
+  padding: 50px 20px;
+  background-color: #e6f7ff; /* Light blue background */
+  text-align: center;
+}
+
+.programs h2 {
+  font-size: 2.5em;
+  color: #005073; /* Darker blue for the title */
+  margin-bottom: 20px;
+}
+
+.programs p {
+  font-size: 1.2em;
+  color: #004060; /* Medium blue for the description */
+  margin-bottom: 40px;
+}
+
+.programs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px; /* Space between grid items */
+}
+
+.programs-list li {
+  background-color: #ffffff; /* White background for each program card */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.programs-list li:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.programs-list h3 {
+  font-size: 1.5em;
+  color: #ff6b00; /* Orange color for program titles */
+  margin-bottom: 10px;
+}
+
+.programs-list p {
+  font-size: 1em;
+  color: #333; /* Dark gray text */
+  line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 2rem;
+  background-color: #008080; /* Teal background */
+  color: #f9f9f9; /* Light text for contrast */
+  text-align: center;
+}
+
+.testimonials article h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff93; /* White for the heading */
+}
+
+.testimonials aside p {
+  font-size: 1.5rem;
+  color: #9e9e9a; /* Light gray for the subheading */
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-container {
+  overflow-x: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  scroll-behavior: smooth;
+  padding-left: 1rem;
+}
+
+.testimonial-list {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.testimonial {
+  flex: 0 0 300px; /* Fixed width for each testimonial */
+  background: #f9f9f9; /* Light gray background for contrast */
+  border: 1px solid #cccccc; /* Gray border */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  color: #333; /* Dark gray text */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Ensure content is spaced evenly */
+  height: 100%; /* Ensure uniform height */
+}
+
+.testimonial img {
+  width: 80px; /* Fixed width for images */
+  height: 80px; /* Fixed height for images */
+  border-radius: 50%; /* Make images circular */
+  object-fit: cover; /* Ensure images are cropped properly */
+  margin: 0 auto 1rem; /* Center the image and add spacing below */
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  color: #555; /* Medium gray for the quote */
+  margin: 0 0 1rem; /* Add spacing below the quote */
+  text-align: center; /* Center-align the quote */
+}
+
+.testimonial footer {
+  font-weight: bold;
+  color: #008080; /* Teal for the footer text */
+  text-align: center; /* Center-align the footer */
+}
+
+/* Responsive Design for Testimonials */
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 1rem; /* Add spacing between testimonials */
+  justify-content: center; /* Center-align testimonials */
+}
+
+.testimonial {
+  flex: 1 1 calc(33.333% - 1rem); /* Responsive grid: 3 columns */
+  max-width: calc(33.333% - 1rem); /* Ensure consistent width */
+}
+
+@media (max-width: 768px) {
+  .testimonial {
+    flex: 1 1 calc(50% - 1rem); /* Responsive grid: 2 columns on smaller screens */
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial {
+    flex: 1 1 100%; /* Single column on very small screens */
+    max-width: 100%;
+  }
+}
+
+.testimonial-container {
+  overflow-x: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  scroll-behavior: smooth;
+  padding-left: 1rem;
+}
+
+.testimonial-list {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.testimonial {
+  flex: 0 0 300px; /* Fixed width for each testimonial */
+  background: #f9f9f9; /* Light gray background for contrast */
+  border: 1px solid #cccccc; /* Gray border */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  color: #333; /* Dark gray text */
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  color: #555; /* Medium gray for the quote */
+}
+
+/* Testimonial Footer */
+.testimonial footer {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #ffffff; /* White text for contrast */
+  background-color: #7df9ff; /* Electric blue background */
+  padding: 0.5rem 1rem; /* Add padding for spacing */
+  border-radius: 8px; /* Rounded corners */
+  display: inline-block; /* Ensure the footer wraps neatly */
+}
+
+.testimonial footer {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #008080; /* Teal for the footer text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials header h2 {
+    font-size: 1.5rem;
+  }
+
+  .testimonials header p {
+    font-size: 0.9rem;
+  }
+
+  .testimonial {
+    flex: 0 0 250px; /* Adjust width for smaller screens */
+  }
+
+  .testimonial-container {
+    padding-left: 0.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+.testimonials h2 {
+  font-size: 2.5em;
+  color: #002b5b; /* Dark blue color */
+  margin-bottom: 20px;
+}
+
+.testimonials p {
+  font-size: 1.2em;
+  color: #555; /* Medium gray text */
+  margin-bottom: 40px;
+}
+
+.swiper-container {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.swiper-slide {
+  background-color: #ffffff; /* White background for each testimonial */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: left;
+}
+
+.swiper-slide blockquote {
+  font-size: 1.2em;
+  color: #333; /* Dark gray text */
+  line-height: 1.6;
+  margin: 0;
+  position: relative;
+  padding-left: 20px;
+  border-left: 5px solid #ff6b00; /* Orange border for blockquote */
+}
+
+.swiper-slide footer {
+  font-size: 1em;
+  color: #555; /* Medium gray for the footer */
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Swiper Navigation Arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #002b5b; /* Dark blue for the arrows */
+  transition: color 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #ff6b00; /* Orange on hover */
+}
+
+/* Footer */
+footer {
+  background-color: #002b5b;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+/* Donations Section */
+#donations {
+  padding: 3rem 1.5rem; /* Add spacing around the section */
+  background-color: #f9f9f9; /* Light gray background */
+  text-align: center; /* Center-align text */
+}
+
+#donations h2 {
+  font-size: 2.5rem; /* Larger font size for the heading */
+  color: #008080; /* Teal color for the heading */
+  margin-bottom: 1rem; /* Add spacing below the heading */
+}
+
+#donations p {
+  font-size: 1.2rem; /* Slightly larger font for the paragraph */
+  color: #555; /* Medium gray for the text */
+  margin-bottom: 2rem; /* Add spacing below the paragraph */
+  line-height: 1.6; /* Improve readability */
+}
+
+#donations .btn {
+  background-color: #4c3d31; /* Bright orange button */
+  color: #ffffff; /* White text for contrast */
+  padding: 0.8rem 2rem; /* Add padding for the button */
+  font-size: 1.2rem; /* Larger font size for the button */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#donations .btn:hover {
+  background-color: #e65a00; /* Darker orange on hover */
+}
+
+/* Donation Instructions Page */
+#donations {
+  padding: 3rem 1.5rem; /* Add spacing around the section */
+  background-color: #f9f9f9; /* Light gray background */
+  text-align: center; /* Center-align text */
+}
+
+#donations h3 {
+  font-size: 2rem; /* Font size for the heading */
+  color: #005073; /* Dark teal for the heading text */
+  margin-bottom: 1rem; /* Add spacing below the heading */
+}
+
+#donations p {
+  font-size: 1.2rem; /* Slightly larger font for the paragraph */
+  color: #333; /* Dark gray for the text */
+  margin-bottom: 2rem; /* Add spacing below the paragraph */
+  line-height: 1.6; /* Improve readability */
+}
+
+#donations ol {
+  list-style: decimal; /* Use numbered list */
+  margin: 0 auto; /* Center the list */
+  padding: 0;
+  max-width: 600px; /* Limit the width of the list */
+  text-align: left; /* Align text to the left */
+}
+
+#donations ol li {
+  font-size: 1.1rem; /* Slightly larger font size for list items */
+  color: #555; /* Medium gray for the text */
+  margin-bottom: 1rem; /* Add spacing between list items */
+  line-height: 1.5; /* Improve readability */
+}
+
+#donations ol li b {
+  color: #005073; /* Dark teal for emphasized text */
+}
+
+/* Contact Section */
+.contact {
+  padding: 3rem 1.5rem; /* Add spacing around the section */
+  background-color: #7df9ff; /* Electric blue background */
+  text-align: center; /* Center-align text */
+}
+
+.contact header {
+  background-color: #7df9ff; /* Explicitly set electric blue for the header */
+  padding: 1rem; /* Add padding inside the header */
+  border-radius: 8px; /* Add rounded corners for a softer look */
+}
+
+.contact h2 {
+  font-size: 2.5rem; /* Larger font size for the heading */
+  color: #005073; /* Dark teal for the heading text */
+  margin-bottom: 1rem; /* Add spacing below the heading */
+}
+
+.contact p {
+  font-size: 1.2rem; /* Slightly larger font for the paragraph */
+  color: #333; /* Dark gray for the text */
+  margin-bottom: 2rem; /* Add spacing below the paragraph */
+  line-height: 1.6; /* Improve readability */
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Space between the links */
+  flex-wrap: wrap; /* Wrap links on smaller screens */
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #005073; /* Dark teal background for buttons */
+  color: #ffffff; /* White text for contrast */
+  padding: 1rem 2rem; /* Add padding for the links */
+  font-size: 1.2rem; /* Larger font size for the links */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.contact-link i {
+  margin-right: 0.5rem; /* Add spacing between icon and text */
+}
+
+.contact-link:hover {
+  background-color: #003f5c; /* Slightly darker teal on hover */
+}
+
+/* Footer Section */
+.footer {
+  background-color: #64768b8e; /* Dark blue background */
+  color: #ffffff; /* White text for contrast */
+  text-align: center; /* Center-align text */
+  padding: 2rem 1rem; /* Add spacing around the footer */
+  font-size: 1.2rem; /* Base font size for the footer */
+}
+
+.footer-content p {
+  margin: 0.5rem 0; /* Add spacing between paragraphs */
+  font-size: 1.1em; /* Slightly larger font size for paragraphs */
+}
+
+.footer-content a {
+  color: #7df9ff; /* Electric blue for links */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make links bold */
+  font-size: 1.1em; /* Slightly larger font size for links */
+}
+
+.footer-content a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.social-links {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 1rem 0 0; /* Add spacing above the social links */
+  display: flex;
+  justify-content: center; /* Center-align the social links */
+  gap: 1.5rem; /* Add spacing between icons */
+}
+
+.social-links li {
+  display: inline-block; /* Ensure icons are inline */
+}
+
+.social-links a {
+  color: #ffffff; /* White icons */
+  font-size: 1.8rem; /* Larger icon size */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.social-links a:hover {
+  color: #7df9ff; /* Electric blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 1rem; /* Slightly smaller font size for smaller screens */
+  }
+
+  .social-links a {
+    font-size: 1.5rem; /* Adjust icon size for smaller screens */
+  }
+}
