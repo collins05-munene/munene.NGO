@@ -472,7 +472,7 @@ header nav h1 {
 
 /* Footer */
 footer {
-  background-color: #002b5b;
+  background-color: #002a5bab;
   color: #ffffff;
   text-align: center;
   padding: 20px 10px;
@@ -607,7 +607,7 @@ footer {
 
 /* Footer Section */
 .footer {
-  background-color: #64768b8e; /* Dark blue background */
+  background-color: #40454bd3; /* Dark blue background */
   color: #ffffff; /* White text for contrast */
   text-align: center; /* Center-align text */
   padding: 2rem 1rem; /* Add spacing around the footer */
